@@ -20,7 +20,9 @@
     line-height:1.6;-webkit-font-smoothing:antialiased}
   .wrap{max-width:680px;margin:0 auto;padding:32px 20px 56px}
   h1{font-size:26px;font-weight:600;margin:0 0 6px}
-  .sub{font-size:15px;color:var(--muted);margin:0 0 24px}
+  .sub{font-size:15px;color:var(--muted);margin:0 0 10px}
+  .intro{font-size:15px;color:var(--ink);margin:0 0 24px}
+  .key{font-size:12px;color:var(--faint);margin-bottom:14px}
   .sec{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:16px}
   .lbl{font-size:13px;color:var(--muted);margin-bottom:12px}
   .q{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:13px 0;border-top:1px solid var(--line)}
@@ -48,10 +50,12 @@
 <body>
 <div class="wrap" id="root">
   <h1>AI governance quick check</h1>
-  <p class="sub">Two minutes. Rate one AI use case, then your organization. Amber marks a risk or a gap; green marks you're covered.</p>
+  <p class="sub">Two minutes, no signup. How risky is one of your AI use cases — and is your organization ready to govern it?</p>
+  <p class="intro">Most organizations aren't stuck on frameworks. They're stuck on where to begin.</p>
 
   <div class="sec">
     <div class="lbl">Part 1 · One AI use case — how risky is it?</div>
+    <div class="key">Amber marks a risk or a gap; green marks you're covered.</div>
     <div class="q"><span class="qt">Does it make or heavily influence decisions about people (hiring, lending, performance, eligibility)?</span><span class="tog"><button class="b" data-q="r1" data-v="1" data-risk="1">Yes</button><button class="b" data-q="r1" data-v="0" data-risk="1">No</button></span></div>
     <div class="q"><span class="qt">Does it touch customer or personal data?</span><span class="tog"><button class="b" data-q="r2" data-v="1" data-risk="1">Yes</button><button class="b" data-q="r2" data-v="0" data-risk="1">No</button></span></div>
     <div class="q"><span class="qt">Does it act automatically, without a human reviewing each output?</span><span class="tog"><button class="b" data-q="r3" data-v="1" data-risk="1">Yes</button><button class="b" data-q="r3" data-v="0" data-risk="1">No</button></span></div>
@@ -111,7 +115,7 @@
       +'<div class="h">Your readiness</div><p class="p" style="margin-bottom:10px">'+ready+'</p>'
       +'<div class="gap"><strong>Your biggest gap: </strong>'+gap+'</div>'
       +'<div class="triad"><strong>See it. Prioritize it. Govern it.</strong></div>'
-      +'<p class="byline">Built by Chhaya Gala — I help organizations do exactly this: see their AI, size the risk, and put the right oversight in place. <a href="https://www.linkedin.com/in/chhaya-keniya-gala">Let\'s talk &rarr;</a></p>'
+      +'<p class="byline">Built by Chhaya Gala — I help organizations do exactly this: see their AI, size the risk, and put the right oversight in place. <a href="https://www.linkedin.com/in/chhayakeniyagala/" target="_blank" rel="noopener">Let\'s talk &rarr;</a></p>'
       +'<p class="disc">An educational starting point, not a compliance determination or legal advice.</p>'
       +'</div>';
     document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'});
