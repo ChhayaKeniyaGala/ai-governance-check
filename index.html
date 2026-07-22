@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI Governance Quick Check — Chhaya Gala</title>
 <meta name="description" content="A two-minute check: how risky is one of your AI use cases, and is your organization ready to govern it?">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI Governance Quick Check">
+<meta property="og:description" content="A free two-minute check: how risky is one of your AI use cases, and where's your biggest governance gap? No signup, nothing collected.">
+<meta property="og:image" content="https://chhayakeniyagala.github.io/ai-governance-check/preview.png">
+<meta property="og:url" content="https://chhayakeniyagala.github.io/ai-governance-check/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Governance Quick Check">
+<meta name="twitter:description" content="A free two-minute check: how risky is one of your AI use cases, and where's your biggest governance gap? No signup, nothing collected.">
+<meta name="twitter:image" content="https://chhayakeniyagala.github.io/ai-governance-check/preview.png">
 <style>
   :root{
     --bg:#f7f5ef; --card:#ffffff; --line:#e6e3da; --line2:#d8d4c8;
@@ -43,12 +52,20 @@
   .byline{font-size:14px;color:var(--muted);margin-top:10px}
   .byline a{color:var(--amber-fg)}
   .disc{font-size:12px;color:var(--faint);margin-top:12px}
-  .foot{text-align:center;font-size:12px;color:var(--faint);margin-top:28px}
+  .brand{font-size:13px;color:var(--faint);margin-bottom:14px;letter-spacing:.01em}
+  .brand a{color:var(--amber-fg);text-decoration:none;font-weight:600}
+  .brand a:hover{text-decoration:underline}
+  .foot{text-align:center;font-size:13px;color:var(--muted);margin-top:32px;line-height:1.7;
+    border-top:1px solid var(--line);padding-top:20px}
+  .foot a{color:var(--amber-fg);font-weight:600;text-decoration:none}
+  .foot a:hover{text-decoration:underline}
+  .foot-sub{font-size:12px;color:var(--faint)}
   @media(max-width:520px){.q{flex-direction:column;align-items:flex-start}.tog{align-self:flex-end}}
 </style>
 </head>
 <body>
 <div class="wrap" id="root">
+  <div class="brand"><a href="https://www.linkedin.com/in/chhayakeniyagala/" target="_blank" rel="noopener">Chhaya Gala</a> · AI governance &amp; fractional CIO advisory</div>
   <h1>AI governance quick check</h1>
   <p class="sub">Two minutes, no signup. How risky is one of your AI use cases — and is your organization ready to govern it?</p>
   <p class="intro">Most organizations aren't stuck on frameworks. They're stuck on where to begin.</p>
@@ -75,7 +92,7 @@
   <button id="go">See my result</button>
   <div id="result"></div>
 
-  <div class="foot">© Chhaya Gala · AI governance &amp; fractional CIO advisory</div>
+  <div class="foot">Built by <a href="https://www.linkedin.com/in/chhayakeniyagala/" target="_blank" rel="noopener">Chhaya Gala</a> — I help organizations see their AI, size the risk, and put the right oversight in place.<br><span class="foot-sub">AI governance &amp; fractional CIO advisory · Columbus, Ohio</span></div>
 </div>
 
 <script>
