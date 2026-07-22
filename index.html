@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Governance Quick Check — Chhaya Gala</title>
+<meta name="description" content="A two-minute check: how risky is one of your AI use cases, and is your organization ready to govern it?">
+<style>
+  :root{
+    --bg:#f7f5ef; --card:#ffffff; --line:#e6e3da; --line2:#d8d4c8;
+    --ink:#211f1b; --muted:#5f5d57; --faint:#8b897f;
+    --amber-bg:#faeeda; --amber-fg:#854f0b; --amber-bd:#ef9f27;
+    --green-bg:#eaf3de; --green-fg:#27500a; --green-bd:#97c459;
+    --red-bg:#fcebeb; --red-fg:#a32d2d;
+    --radius:8px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:32px 20px 56px}
+  h1{font-size:26px;font-weight:600;margin:0 0 6px}
+  .sub{font-size:15px;color:var(--muted);margin:0 0 24px}
+  .sec{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:16px}
+  .lbl{font-size:13px;color:var(--muted);margin-bottom:12px}
+  .q{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:13px 0;border-top:1px solid var(--line)}
+  .q:first-of-type{border-top:none}
+  .qt{font-size:15px;line-height:1.5}
+  .tog{display:flex;gap:8px;flex:none}
+  .b{border:1px solid var(--line2);background:transparent;color:var(--muted);border-radius:var(--radius);
+    padding:8px 18px;font-size:14px;cursor:pointer;font-family:inherit;transition:background .12s,color .12s,border-color .12s}
+  .b:hover{border-color:var(--faint)}
+  #go{width:100%;padding:13px;border:1px solid var(--line2);background:#fff;color:var(--ink);
+    border-radius:var(--radius);font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;margin-top:4px}
+  #go:hover{background:#faf8f2}
+  .tier{display:inline-block;font-size:14px;font-weight:600;padding:5px 14px;border-radius:var(--radius);margin-bottom:12px}
+  .h{font-size:16px;font-weight:600;margin:0 0 6px}
+  .p{font-size:14px;color:var(--muted);margin:0 0 16px}
+  .gap{background:var(--bg);border-radius:var(--radius);padding:13px 15px;font-size:14px;line-height:1.6;margin-bottom:14px}
+  .triad{font-size:15px;border-top:1px solid var(--line);padding-top:14px}
+  .byline{font-size:14px;color:var(--muted);margin-top:10px}
+  .byline a{color:var(--amber-fg)}
+  .disc{font-size:12px;color:var(--faint);margin-top:12px}
+  .foot{text-align:center;font-size:12px;color:var(--faint);margin-top:28px}
+  @media(max-width:520px){.q{flex-direction:column;align-items:flex-start}.tog{align-self:flex-end}}
+</style>
+</head>
+<body>
+<div class="wrap" id="root">
+  <h1>AI governance quick check</h1>
+  <p class="sub">Two minutes. Rate one AI use case, then your organization. Amber marks a risk or a gap; green marks you're covered.</p>
+
+  <div class="sec">
+    <div class="lbl">Part 1 · One AI use case — how risky is it?</div>
+    <div class="q"><span class="qt">Does it make or heavily influence decisions about people (hiring, lending, performance, eligibility)?</span><span class="tog"><button class="b" data-q="r1" data-v="1" data-risk="1">Yes</button><button class="b" data-q="r1" data-v="0" data-risk="1">No</button></span></div>
+    <div class="q"><span class="qt">Does it touch customer or personal data?</span><span class="tog"><button class="b" data-q="r2" data-v="1" data-risk="1">Yes</button><button class="b" data-q="r2" data-v="0" data-risk="1">No</button></span></div>
+    <div class="q"><span class="qt">Does it act automatically, without a human reviewing each output?</span><span class="tog"><button class="b" data-q="r3" data-v="1" data-risk="1">Yes</button><button class="b" data-q="r3" data-v="0" data-risk="1">No</button></span></div>
+    <div class="q"><span class="qt">Does it affect money, safety, or legal outcomes?</span><span class="tog"><button class="b" data-q="r4" data-v="1" data-risk="1">Yes</button><button class="b" data-q="r4" data-v="0" data-risk="1">No</button></span></div>
+    <div class="q"><span class="qt">Is it a vendor feature or tool you didn't build or fully vet?</span><span class="tog"><button class="b" data-q="r5" data-v="1" data-risk="1">Yes</button><button class="b" data-q="r5" data-v="0" data-risk="1">No</button></span></div>
+  </div>
+
+  <div class="sec">
+    <div class="lbl">Part 2 · Your organization — are you ready to govern it?</div>
+    <div class="q"><span class="qt">Do you have an up-to-date inventory of AI in use across the org?</span><span class="tog"><button class="b" data-q="o1" data-v="1" data-risk="0">Yes</button><button class="b" data-q="o1" data-v="0" data-risk="0">No</button></span></div>
+    <div class="q"><span class="qt">Does each significant AI use have a named owner?</span><span class="tog"><button class="b" data-q="o2" data-v="1" data-risk="0">Yes</button><button class="b" data-q="o2" data-v="0" data-risk="0">No</button></span></div>
+    <div class="q"><span class="qt">Is someone reviewing AI outputs before they're trusted?</span><span class="tog"><button class="b" data-q="o3" data-v="1" data-risk="0">Yes</button><button class="b" data-q="o3" data-v="0" data-risk="0">No</button></span></div>
+    <div class="q"><span class="qt">Do you review the AI built into vendor tools you buy?</span><span class="tog"><button class="b" data-q="o4" data-v="1" data-risk="0">Yes</button><button class="b" data-q="o4" data-v="0" data-risk="0">No</button></span></div>
+    <div class="q"><span class="qt">Do you have visibility into what your AI usage costs?</span><span class="tog"><button class="b" data-q="o5" data-v="1" data-risk="0">Yes</button><button class="b" data-q="o5" data-v="0" data-risk="0">No</button></span></div>
+  </div>
+
+  <button id="go">See my result</button>
+  <div id="result"></div>
+
+  <div class="foot">© Chhaya Gala · AI governance &amp; fractional CIO advisory</div>
+</div>
+
+<script>
+(function(){
+  var A={};
+  var AMBER={bg:'#faeeda',fg:'#854f0b',bd:'#ef9f27'};
+  var GREEN={bg:'#eaf3de',fg:'#27500a',bd:'#97c459'};
+  function paint(b,c){b.style.background=c.bg;b.style.color=c.fg;b.style.borderColor=c.bd;}
+  function clr(b){b.style.background='';b.style.color='';b.style.borderColor='';}
+  document.addEventListener('click',function(e){
+    var b=e.target.closest?e.target.closest('.b'):null;
+    if(b){
+      var q=b.getAttribute('data-q'), v=parseInt(b.getAttribute('data-v'),10), risk=b.getAttribute('data-risk')==='1';
+      A[q]=v;
+      var sibs=b.parentNode.getElementsByClassName('b');
+      for(var k=0;k<sibs.length;k++){clr(sibs[k]);}
+      paint(b,(risk?(v===1):(v===0))?AMBER:GREEN);
+      return;
+    }
+    if(e.target && e.target.id==='go'){compute();}
+  });
+  function compute(){
+    var need=['r1','r2','r3','r4','r5','o1','o2','o3','o4','o5'];
+    for(var i=0;i<need.length;i++){if(A[need[i]]===undefined){document.getElementById('result').innerHTML='<p class="p" style="color:#854f0b;margin-top:14px">Please answer all ten questions first.</p>';window.scrollTo(0,document.body.scrollHeight);return;}}
+    var rScore=A.r1+A.r2+A.r3+A.r4+A.r5, tier, tc, tmean;
+    if(A.r1===1||(A.r4===1&&A.r3===1)){tier='High risk';tc={bg:'#fcebeb',fg:'#a32d2d'};tmean='This use can materially affect people, money, or rights. It needs the most oversight: a human who can intervene, documentation of how it decides, bias and accuracy checks, and ongoing monitoring after launch.';}
+    else if(rScore>=2){tier='Limited risk';tc={bg:'#faeeda',fg:'#854f0b'};tmean='Real exposure, but manageable. Give it a named owner, basic documentation, and a way to catch bad outputs — especially where it touches data or customers.';}
+    else{tier='Minimal risk';tc={bg:'#eaf3de',fg:'#27500a'};tmean='Low stakes for now. Keep it on your AI inventory so it stays visible, and revisit if its use expands into anything touching people, money, or data.';}
+    var oScore=A.o1+A.o2+A.o3+A.o4+A.o5, ready;
+    if(oScore>=4)ready='Ahead of most organizations.';else if(oScore>=2)ready='Started, but with real gaps.';else ready='Largely ungoverned — worth acting soon.';
+    var order=[['o1','You have no living inventory — you can\'t govern what you can\'t see. That\'s the place to start.'],['o2','No clear owner — governance with no accountable person is a wish, not a control.'],['o3','No one is checking outputs — confident AI output is being trusted without validation.'],['o4','Vendor AI goes unreviewed — the AI you didn\'t build still carries your risk.'],['o5','No cost visibility — AI spend can scale quietly until it surprises finance.']];
+    var gap='Nice — no obvious single gap. Keep all five practices current as your AI use grows.';
+    for(var j=0;j<order.length;j++){if(A[order[j][0]]===0){gap=order[j][1];break;}}
+    document.getElementById('result').innerHTML='<div class="sec" style="margin-top:16px">'
+      +'<span class="tier" style="background:'+tc.bg+';color:'+tc.fg+'">'+tier+'</span>'
+      +'<div class="h">This use case</div><p class="p">'+tmean+'</p>'
+      +'<div class="h">Your readiness</div><p class="p" style="margin-bottom:10px">'+ready+'</p>'
+      +'<div class="gap"><strong>Your biggest gap: </strong>'+gap+'</div>'
+      +'<div class="triad"><strong>See it. Prioritize it. Govern it.</strong></div>'
+      +'<p class="byline">Built by Chhaya Gala — I help organizations do exactly this: see their AI, size the risk, and put the right oversight in place. <a href="https://www.linkedin.com/in/chhaya-keniya-gala">Let\'s talk &rarr;</a></p>'
+      +'<p class="disc">An educational starting point, not a compliance determination or legal advice.</p>'
+      +'</div>';
+    document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'});
+  }
+})();
+</script>
+</body>
+</html>
